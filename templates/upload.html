@@ -1,0 +1,44 @@
+<!-- frontend code for image processing -->
+<html>
+<title> Image Processing </title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--Link Style.css file here-->
+<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+
+<body><br>
+
+
+<h1>Image Processing</h1><hr>
+<br>
+<!--Add <form> Tag here along with two <br> tags-->
+<form method="post" action="/" enctype="multipart/form-data">
+    <h2>Select an Image for adding an effect to it.</h2>
+    <select name="imagetypeselection">
+        <option class="option" value="gray">Black and white</option>
+        <option class="option" value="sketch">Sketch</option>
+        <option class="option" value="oil">Oil painting</option>
+        <option class="option" value="rgb">RGB</option>
+        <option class="option" value="hdr">HDR</option>
+        <option class="option" value="water">Watercolour</option>
+        <option class="option" value="inv">Invert</option>
+    </select>
+
+    <!--Write input tag to add upload button-->
+    <input type="file" name="file" class="btn btn-primary btn-lg">
+
+    <!--Write input tag to add Submit button-->
+    <input type="submit" value="submit" class="btn btn-success btn-lg">
+
+    <!--Add h3 tag to display message defined in app.py file after images gets uploaded-->
+    <h3>{{message}}</h3>
+
+<!--End <form> tag-->
+</form>
+<!--Add <img> tag to display the uploaded image-->
+<img src="{{url_for('display_image', filename=filename)}}">
+
+
+</body>
+</html>

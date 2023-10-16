@@ -1,0 +1,35 @@
+body{
+    background-color: orange;
+    text-align: center;
+}
+input[type=file] {
+    display:inline-block;
+    }
+img {
+    width:70%;
+    }
+
+h3{
+    color:green;
+    }
+
+h1{
+    font-weight: bold;
+    }
+
+hr{
+    border: 5px solid black;
+    border-radius: 5px;
+    }
+.option{
+    font-weight: bold !important;
+}
+select{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-weight: bold !important;
+    color: black;
+    border-color: black;
+    background-color: rgb(255, 255, 255);
+}
